@@ -1,4 +1,4 @@
-## 1. Docker 기본 명령어 사용 (run, ps)
+## 2. Docker 기본 명령어 사용 (run, ps)
 #### 1) Docker 내부 파일 시스템 구조
 ```
 # docker run 이미지이름 ls

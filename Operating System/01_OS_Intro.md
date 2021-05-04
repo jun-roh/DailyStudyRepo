@@ -1,6 +1,6 @@
-##01. Operating System 역할
+## 01. Operating System 역할
 
-###1. Operating System
+### 1. Operating System
 
 운영 체제 즉 Operating System 또는 OS 라고 불린다.
 
@@ -34,7 +34,7 @@
 ![Alt text](./images/os_intro.png "OS Intro") 
 * Hardware 위에서 Application 들이 동작 할 수 있도록 중간에 OS 가 실행 제어를 한다.
 
-###2. 응용프로그램(Application)
+### 2. 응용프로그램(Application)
 * 우리가 알고 있는 프로그램은 소프트웨어라고도 부른다.
 * 소프트웨어는 운영체제와 응용프로그램 두가지로 볼 수 있다.
 

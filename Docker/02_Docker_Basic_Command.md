@@ -38,13 +38,13 @@ docker ps
     - PORT : Container 가 개방한 포트와 호스트에 연결한 포트
     - NAMES : Container 고유한 이름. 컨테이너 생성시 --name 옵션으로 설정. default 로 임의로 지정해줌.
     
-####* 원하는 항목만 보고 싶을 경우
+#### * 원하는 항목만 보고 싶을 경우
 ```
 # docker ps --format 'table{{.Names}}\ttable{{.Image}}'
 NAMES            tableIMAGE
 ecstatic_raman   tablealpine
 ```
-####*모든 Container 보고 싶을 경우
+#### *모든 Container 보고 싶을 경우
 ```
 # docker ps -a 
 CONTAINER ID   IMAGE         COMMAND            CREATED          STATUS                   PORTS     NAMES

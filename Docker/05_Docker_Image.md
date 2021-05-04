@@ -4,10 +4,10 @@
 
 * Docker Hub 에서 다른 사람들이 만든 Image 를 사용할 수 있고 직접 Image 를 만들어서 Docker Hub 에 업로드 할 수 있다.
 
-###1. Docker 이미지 생성 순서
+### 1. Docker 이미지 생성 순서
    ![Alt text](./images/docker_image_create.png "Docker Image 생성 순서")
 
-###2. Dockerfile 만들기
+### 2. Dockerfile 만들기
 
 * Docker Image 를 만들기 위해 첫번째로 작성해야하는 설정 파일
 * Container 가 어떻게 동작하는지 설정에 대해서 정의
@@ -22,7 +22,7 @@
 - 그 중에 Base Image 는 기반이 되는 설정들을 가지고 있는 이미지라고 볼 수 있다.
 - 필요하다면 Base Image 에 또 다른 Layer 를 추가 할 수 있다.
 
-###3. Docker Client, Docker Server
+### 3. Docker Client, Docker Server
 - Dockerfile 작성이 끝났으면 Docker Client 에 전달되어 Docker Server 가 인식이 되게 해야함
 - build 명령어를 사용해서 dockerfile 을 찾아 docker client 에 전달
 ```
@@ -32,7 +32,7 @@
 
 #### * 베이스 이미지에서 다른 종속성이나 새로운 커맨드를 추가할때 임시 Container 를 토대로 새로운 이미지를 만든다. 그 후에 임시 Container 는 지워준다.
 
-###4. Image 이름 생성
+### 4. Image 이름 생성
 
 * 원래
 * option 을 사용해서 이름을 지정

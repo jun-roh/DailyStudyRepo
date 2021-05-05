@@ -5,6 +5,8 @@
 [실습]
 * 목표 : 페이지를 refresh 할때 숫자를 +1 해주는 간단한  프로그램 
 * node js + redis 사용
+* 구조
+  ![Alt text](./images/docker_compose.png "Docker Compose 구조")
 
 1. package.json 생성
 ```

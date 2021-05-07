@@ -1,9 +1,12 @@
 ## 1일 1 commit 을 목표로 개인적으로 끄적끄적이는 repository
 
 ###* 오늘의 스터디
+* 2021-05-07
+  * [OS] Scheduling Algorithm
+  * [OS] Process 상태와 Scheduler
+
 * 2021-05-06
   * [Docker] 간단한 React 앱 개발 - 개발 환경
-  
 
 * 2021-05-05
   * [Docker]Docker Compose

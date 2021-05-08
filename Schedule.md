@@ -1,6 +1,10 @@
 ## 1일 1 commit 을 목표로 개인적으로 끄적끄적이는 repository
 
 ###* 오늘의 스터디
+* 2021-05-08
+  * [OS] Interrupt
+  * [OS] Process 구조
+
 * 2021-05-07
   * [OS] Scheduling Algorithm
   * [OS] Process 상태와 Scheduler

@@ -7,3 +7,5 @@
 3. [Process Scheduling](03_Process_Scheduling.md)
 4. [Scheduling Algorithm](04_Scheduling_algorithm.md)
 5. [Process 상태와 Scheduler](05_Process_status_scheduling.md)
+6. [Interrupt](06_Interrupt.md)
+7. [Process 구조](07_Process_Structure.md)

@@ -9,3 +9,5 @@
 5. [Process 상태와 Scheduler](05_Process_status_scheduling.md)
 6. [Interrupt](06_Interrupt.md)
 7. [Process 구조](07_Process_Structure.md)
+8. [Context Switching](08_Context_Switching.md)
+9. [Process 간 Communication](09_Process_Communication.md)

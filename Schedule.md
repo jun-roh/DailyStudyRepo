@@ -1,6 +1,12 @@
 ## 1일 1 commit 을 목표로 개인적으로 끄적끄적이는 repository
 
 ###* 오늘의 스터디
+* 2021-05-13
+  * [OS] 가상메모리
+  
+* 2021-05-12
+  * [OS] Thread
+
 * 2021-05-11
   * [OS] Process 간 커뮤니케이션 - Signal, Socket
   * [OS] Thread

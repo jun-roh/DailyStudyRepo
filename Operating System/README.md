@@ -13,3 +13,6 @@
 9. [Process 간 Communication](09_Process_Communication.md)
 10. [Thread](10_Thread.md)
 11. [가상 메모리](11_virtual_memory.md)
+12. [파일 시스템](12_File_System.md)
+13. [부팅](13_boot.md)
+14. [가상머신](14_virtual_machine.md)

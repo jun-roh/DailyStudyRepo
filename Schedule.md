@@ -1,6 +1,12 @@
 ## 1일 1 commit 을 목표로 개인적으로 끄적끄적이는 repository
 
 ###* 오늘의 스터디
+* 2021-05-19
+  * [SP] System Programming 1
+    * 다중사용자
+    * 파일 및 권한
+    * 리다이렉션과 파이프
+  
 * 2021-05-18
   * [SP] Linux 설치(Ubuntu)
   

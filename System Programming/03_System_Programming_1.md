@@ -237,15 +237,15 @@ mysql.cnf 파일 뒷부분만 출력(기본 10줄)
     -c : 패턴과 일치하는 라인의 개수만 출력한다
     -r : 하위 디렉토리까지 검색한다
 ```
-    * 예
-        * grep python files.txt
-            * files.txt 파일에서 python 라는 문구가 들어간 모든 행 출력
-        * grep -n python files.txt
-            * files.txt 파일에서 python 문구가 들어간 모든 행을 라인까지 출력      
-        * grep -r python foldername
-            * 폴더 내의 모든 파일 중 python 라는 문구가 들어간 행 출력
-        * grep -i python files.txt 
-            * files.txt 파일에서 python 라는 문구를 대, 소문자 구분 없이 검색해서 출력
-        * grep -E "go|python|java" files.txt 
-            * files.txt 파일에서 go, java 또는 pyhthon 이 있는 모든 행 출력
+* 예
+    * grep python files.txt
+        * files.txt 파일에서 python 라는 문구가 들어간 모든 행 출력
+    * grep -n python files.txt
+        * files.txt 파일에서 python 문구가 들어간 모든 행을 라인까지 출력      
+    * grep -r python foldername
+        * 폴더 내의 모든 파일 중 python 라는 문구가 들어간 행 출력
+    * grep -i python files.txt 
+        * files.txt 파일에서 python 라는 문구를 대, 소문자 구분 없이 검색해서 출력
+    * grep -E "go|python|java" files.txt 
+        * files.txt 파일에서 go, java 또는 pyhthon 이 있는 모든 행 출력
 

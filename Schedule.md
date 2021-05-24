@@ -1,6 +1,10 @@
 ## 1일 1 commit 을 목표로 개인적으로 끄적끄적이는 repository
 
 ###* 오늘의 스터디
+* 2021-05-24
+  * [SP] Process ID
+  * [SP] Process 생성
+
 * 2021-05-22
   * [SP] System Programming 4
 * 2021-05-21

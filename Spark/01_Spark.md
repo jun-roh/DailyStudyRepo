@@ -39,3 +39,9 @@
 ```
 # brew install apache-spark
 ```
+
+#### 4. Spring boot + Spark + mysql + redis
+* [Spark for Spring boot](https://github.com/jun-roh/SparkSample)
+   * README 참고
+   
+#### 5. 

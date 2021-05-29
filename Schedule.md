@@ -1,6 +1,9 @@
 ## 1일 1 commit 을 목표로 개인적으로 끄적끄적이는 repository
 
 ###* 오늘의 스터디
+* 2021-05-29
+  * [SP] 메모리와 mmap
+  
 * 2021-05-28
   * [SP] Shell Script
   * [SP] PThread

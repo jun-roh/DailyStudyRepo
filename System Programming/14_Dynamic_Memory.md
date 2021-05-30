@@ -42,9 +42,57 @@ void *mmap(void *start, size_t length, int prot, int flags, int fd, off_t offset
     * mmap 은 페이지 사이즈 단위로 매핑
         * 페이지 사이즈 단위의 정부새가 아닌 경우 한 페이지 정도의 공간 추가 할당 및 남은 공간을 0으로 채워주게 됨
     
-#### 5. 파일 처리 선은 개선 기법 - 메모리에 파일 매핑
+#### 5. 파일 처리 성능 개선 기법 - 메모리에 파일 매핑
 ```
 int munmap(void *addr, size_t length)
 ```
 * *addr 에 mapping 된 물리 메모리 주소를 해제한다
 * length: mapping 된 메모리 크기 (mmap 에서 지정했던 동일 값을 넣음)
+
+```
+int msync(void *start, size_t length, int flags);
+```
+* start: mmap()를 통해 리턴 받은 메모리 맵의 시작 주소
+* length: 동기화를 할 길이 시작 주소로 부터 길이를 지정하면 된다
+* flags
+    * MS_ASYNC: 비동기 방식, 동기화(memory -> file) 하라는 명령만 내리고 결과에 관계 없이 다음 코드 실행(따라서, 동기화가 완료안된 상태로 다음 코드 실행 가능)
+    * MS_SYNC: 동기 방식, 동기화(memory -> file)가 될때까지 블럭 상태로 대기
+    * MS_INVALIDATE: 현재 메모리 맵을 무효화 하고 파일의 데이터로 갱신 즉 File -> Memory
+    
+#### 5. inode 파일 시스템
+1. inode 메타 데이터 - stat 함수
+```
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
+
+int stat (const char *path, struct stat * buf);
+int fstat(int filedes. struct stat *buf);
+```
+> fopen/read/write 등 기본 파일 시스템콜은 C 언어 과목에서 다룸
+
+2. inode 메타 데이터 - stat 구조체
+```
+struct stat {
+    dev_t       st_dev;     /* ID of device containing file */
+    ino_t       st_ino;     /* inode number */
+    mode_t      st_mode;    /* 파일 종류 및 접근 권한 */
+    nlink_t     st_nlink;   /* hardlink 된 횟수 */
+    uid_t       st_uid;     /* 파일 소유자 */
+    gid_t       st_gid;     /* group Id of owner */
+    dev_t       st_rdev;    /* device ID (if special file) */
+    off_t       st_size;    /* 파일 크기(bytes) */
+    blksize_t   st_blksize; /* blocksize for file system I/O */
+    tlkcnt_t    st_blocks;  /* number of 512B block allocated */
+    time_t      st_atime;   /* time of last access */
+    time_t      st_mtime;   /* time of last modification */
+    time_t      st_ctime;   /* time of last status change */
+}
+```
+
+3. Standard Stream(표준 입출력) 과 파일 시스템콜
+* command 로 실행되는 프로세스는 세가지 스트림을 가지고 있음
+    * 표준 입력 스트림 (Standard Input Stream)     - stdin
+    * 표준 출력 스트림 (Standard Output Stream)    - stdout
+    * 오류 출력 스트림 (Standard Error Stream)     - stderr
+* 모든 스트림은 일반적인 plain text 로 console 에 출력하도록 되어 있음

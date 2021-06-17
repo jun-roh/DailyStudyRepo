@@ -61,3 +61,44 @@
 * 라우팅 경로 확인 명령어
 * 출발지에서 목적지 IP 까지 거치는 라우터 최적 경로 확인
 
+#### 5. ICMP
+1. ICMP (Internet Control Message Protocol)
+* 인터넷 제어 메시지 프로토콜
+* IP 통신은 목적지에 패킷을 정상적으로 전달하는 방법은 있지만 에러 발생시 처리불가
+* ICMP 는 IP 통신의 에러 상황을 출발지에 전달 & 메시지 제어 역할
+* ICMP 는 IPv4 패킷으로 캡슐화
+* Protocol ID = 1
+* Ping & Traceroute 명령어를 사용
+
+2. ICMP 포맷 구조
+* IP 패킷에 포함
+  ![Alt text](./images/04_network_02.png "IP")
+  
+3. ICMP Type
+   ![Alt text](./images/04_network_03.png "IP")
+   
+4. ICMP 기능
+* Type 8 & 0 Echo Request & Reply
+    * 네트워크 문제 진단시 사용
+* Type 9 & 10 라우터 광고 & 정보 요청
+    * 자신이 라우터 임을 응답 & 네트워크 진입시 라우터 정보 요청
+* Type 3 Destination Unreachable & 5 Redirect
+    * 라우터가 IP 패킷을 라우팅 하지 못하는 경우에 발생
+    
+* Type 11 Time Exceeded & 12 Parameter Problem
+    * 시간 초과, TTL 값이 0 이 되면 출발지에게 응답
+    
+* Ping Type 8 echo Request & Type 0 echo reply
+* Traceroute Type 11 time exceeded
+
+#### 6. DHCP (Dynamic Host Control Protocol)
+1. DHCP
+* 동적 호스트 구성 프로토콜
+* DHCP 서버를 사용하여 클라이언트인 네트워크 장치에 IP 주소를 자동으로 할당
+
+2. DHCP 타입
+   ![Alt text](./images/04_network_04.png "IP")
+   
+3. DHCP 동작
+* IP 할당, 갱신, 해제의 과정이 있음
+
